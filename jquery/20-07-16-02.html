@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+</head>
+<body>
+    <form style="padding-left: 100px;" id="forms">
+        姓名:<input type="text" name="name"/><br/>
+        班级:<select name="class">
+                    <option value="1">一班</option>
+                    <option value="2">二班</option>
+                    <option value="3">三班</option>
+                </select>
+                <br/>
+        性别:男<input type="radio" name="sex" value="male"/>
+                 女<input type="radio" name="sex" value="female"/>
+                 <br/>
+        课程:<label><input name="course" type="checkbox" value="1" />语文 </label>
+                <label><input name="course" type="checkbox" value="2" />数学</label>
+                <label><input name="course" type="checkbox" value="3" />历史</label>
+                <label><input name="course" type="checkbox" value="4" />化学</label>
+        <br/>
+            <button  type="submit">submit</button>
+            <button type="button" onclick="submitForm(1)">提交1</button>
+            <button  type="button" onclick="submitForm(2)">提交2</button>
+             <button type="reset">取消</button>
+    </form>
+</body>
+</html>
+<script>
+    function submitForm(par)
+    {
+        if(par == 1)
+        {
+            let post = $("#forms").serializeArray();
+            
+
+            var obj={'a':1,'b':2,'c':3},
+            array=['a','b','c','d'],
+            mix={'data':['a','b','c'],'pp':99,'kk':21};
+            for(let i in obj)
+                console.log("key:"+i+",value:"+obj[i]);
+            for(let i in array)
+                console.log("key:"+i+",value:"+array[i]);
+            for(let i in mix)
+                console.log("key:"+i+",value:"+mix[i]);
+
+            $("#forms button").each(function(index,element){
+                console.log(index+$(element).text());
+            })
+            let num1 = Number("333");
+            console.log(isNaN(num1));
+        }
+    }
+</script>
