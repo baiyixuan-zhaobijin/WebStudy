@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select multiple>
+        <option>JavaScript</option>
+        <option>C#</option>
+        <option>Python</option>
+    </select>
+</body>
+</html>
+<script>
+    let a = 'test';
+    console.log(typeof a);
+
+    function add(a,b)
+    {
+        console.log(arguments);
+    }
+    add(1,3);
+    //随机数
+    console.log(Math.random());
+    //四舍五入
+    console.log(Math.round(3.5));
+    //字符串查找
+    let str1="welcome to the world of JS!";
+    console.log(str1.search('world')); //返回首字母的索引
+    //字符串截取
+    console.log(str1.substr(0,3));
+    console.log(str1.substring(0,5));
+    //切片
+    console.log(str1.slice(2,5));
+</script>
